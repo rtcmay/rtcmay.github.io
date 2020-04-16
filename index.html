@@ -170,7 +170,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2020-04-16 11:24:50 / 修改时间：19:31:46" itemprop="dateCreated datePublished" datetime="2020-04-16T11:24:50-04:00">2020-04-16</time>
+              <time title="创建时间：2020-04-16 11:24:50 / 修改时间：19:43:02" itemprop="dateCreated datePublished" datetime="2020-04-16T11:24:50-04:00">2020-04-16</time>
             </span>
 
           
@@ -212,21 +212,28 @@
 <p><mark>posts</mark> # 文章Markdowm文件</p>
 <p><mark>themes</mark>  # 主题文件夹</p>
 <p>好了，如果上面的命令都没报错的话，就恭喜了，运行 hexo s 命令，其中 s 是 server 的缩写，在浏览器中输入 <a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a> 回车就可以预览效果了。</p>
-<p>##hexo s<br>以下是我本地的预览效果，更换了 next 主题的，默认不是这个主题<br><img src="https://segmentfault.com/img/remote/1460000017990238" alt=""></p>
+<p>##hexo s<br>以下是我本地的预览效果，更换了 next 主题的，默认不是这个主题<br><img src="https://image-static.segmentfault.com/282/914/2829144761-5c47ce00652d0_articlex" class="nofancybox" /></p>
 <p>##注册 Github<br>首先如果你还没有 Github 账号的先注册一个，具体过程如下</p>
-<p><img src="https://segmentfault.com/img/remote/1460000017990239" alt=""></p>
+<img src="https://image-static.segmentfault.com/956/925/956925521-5c47ce013325a_articlex" class="nofancybox" />
+
 <p>点击 Start project 或者下面的 new repository 创建一个新的仓库</p>
-<p><img src="https://segmentfault.com/img/remote/1460000017990240?w=1028&h=620" alt=""></p>
+<img src="https://image-static.segmentfault.com/632/968/632968138-5c47ce00c8bb5_articlex" class="nofancybox" />
+
 <p>注意点来了，Github 仅能使用一个同名仓库的代码托管一个静态站点，这个网上很多教程没说到的。</p>
-<p><img src="https://segmentfault.com/img/remote/1460000017990241?w=747&h=623" alt=""></p>
+<img src="https://image-static.segmentfault.com/184/250/1842507519-5c47ce0077561_articlex" class="nofancybox" />
+
 <p>然后打开仓库创建一个 index.html 文件，并随意先写点内容，比如 Hello World.</p>
-<p><img src="https://segmentfault.com/img/remote/1460000017990242" alt=""></p>
-<p><img src="https://segmentfault.com/img/remote/1460000017990243?w=497&h=226" alt=""></p>
+<img src="https://image-static.segmentfault.com/916/079/916079572-5c47ce00d4540_articlex" class="nofancybox" />
+
+<img src="https://image-static.segmentfault.com/109/056/1090562612-5c47cdffee951_articlex" class="nofancybox" />
+
 <p>这个时候打开 http://你的用户名.github.io 就可以看到你的站点啦，是不是很简单！index.html 内容只是暂时的预览效果，后面把 Hexo 的文件部署上去就可以在 http://你的用户名.github.io 看到你自己的博客啦！ 比如我的就是 <a href="http://webw3c.github.io" target="_blank" rel="noopener">http://webw3c.github.io</a> 了。</p>
-<p><img src="https://segmentfault.com/img/remote/1460000017990244" alt=""></p>
+<img src="https://image-static.segmentfault.com/153/908/1539085719-5c47cdffd476a_articlex" class="nofancybox" />
+
 <p>##部署到 Github<br>此时，本地和Github的工作做得差不了，是时候把它们两个连接起来了。你也可以查看官网的部署教程。<br>先不着急，部署之前还需要修改配置和安装部署插件。</p>
 <p>第一：打开项目根目录下的 _config.yml 配置文件配置参数。拉到文件末尾，填上如下配置（也可同时部署到多个仓库，后面再说）：</p>
-<p><img src="https://segmentfault.com/img/remote/1460000017990250" alt=""></p>
+<img src="https://image-static.segmentfault.com/186/261/1862617-5c47cdffa2f08_articlex" class="nofancybox" />
+
 <p>第二：要安装一个部署插件 hexo-deployer-git</p>
 <p><mark>npm install hexo-deployer-git –save</p>
 <p>最后执行以下命令就可以部署上传啦，以下 g 是 generate 缩写，d 是 deploy 缩写：</p>
@@ -236,12 +243,14 @@
 <p><mark>hexo new ‘文章标题’</p>
 <p>执行完成后可以在 /source/_posts 下看到一个“文章标题.md”的文章文件啦。.md 就是 Markdown 格式的文件，具体用法可以在网上找一下，语法还是比较简单的。</p>
 <p>在 Markdown 文章里面输入你的文章内容</p>
-<p><img src="https://segmentfault.com/img/remote/1460000017990251?w=1526&h=437" alt=""></p>
+<img src="https://image-static.segmentfault.com/292/029/2920298820-5c47cdffac5f1_articlex" class="nofancybox" />
+
 <p>再执行一下以下命令</p>
 <p><mark>hexo g</p>
 <p><mark>hexo s</p>
 <p>就可以看到你的文章在博客显示了，以下就是刚刚</p>
-<p><img src="https://segmentfault.com/img/remote/1460000017990252" alt=""></p>
+<img src="https://image-static.segmentfault.com/855/450/855450233-5c47cdff9d32a_articlex" class="nofancybox" />
+
 <p>最后，只要部署到你的 Github 上就可以了！</p>
 <p><mark>hexo clean</p>
 <p><mark>hexo g -d</p>
@@ -252,9 +261,11 @@
 <p>####一、添加评论系统</p>
 <p>注意我现在已经改用 gitalk 啦，而下面是之前写的 valine 的教程，后面有空会更新或者增加这部分相应的内容，当然，如果你想使用的是 valine 可以继续参考下面的方法配置</p>
 <p>添加 valine 评论系统，打开 /themes/next/_config.yml 文件，搜索 valine，开启 valine，设置 enable 为 true。</p>
-<p><img src="https://segmentfault.com/img/remote/1460000017990254" alt=""></p>
+<img src="https://image-static.segmentfault.com/414/251/4142513013-5c47cdff1eebd_articlex" class="nofancybox" />
+
 <p>然后到 leanCloud 登录或者注册 一个账号，注册后登录创建一个应用，然后进入应该到设置里面找到 AppId 和 AppKey 复制粘贴到主题配置文件里面对应的地方，就是上图中的 appid 和 appkey 这两个地方。</p>
-<p><img src="https://segmentfault.com/img/remote/1460000017990255?w=1279&h=514" alt=""></p>
+<img src="https://image-static.segmentfault.com/348/195/3481952004-5c47cdff16db6_articlex" class="nofancybox" />
+
 <p>###二、添加字数统计和阅读时长<br>首先安装一个插件</p>
 <p><mark>npm install hexo-symbols-count-time –save</p>
 <p>接着博客根目录下的配置文件里添加以下配置</p>
@@ -264,9 +275,11 @@
 <p>  total_symbols: true</p>
 <p>  total_time: true</p>
 <p>最后到 next 主题的配置文件下开启 symbols_count_time 字段</p>
-<p><img src="https://segmentfault.com/img/remote/1460000017990258" alt=""></p>
+<img src="https://image-static.segmentfault.com/309/861/3098615030-5c47cdfda533e_articlex" class="nofancybox" />
+
 <p>重启一下 hexo 就可以看到效果啦</p>
-<p><img src="https://segmentfault.com/img/remote/1460000017990259" alt=""></p>
+<img src="https://image-static.segmentfault.com/403/137/4031372592-5c47cdfe74777_articlex" class="nofancybox" />
+
 <p>##结语</p>
 <p>文章到这差不多啦！后续有些小点深入学习后还是会保持更新的，希望文章对曾经像我一样的小白有那么一点帮助，技术有限，难免有纰漏，欢迎指正批评和讨论，感谢阅读！:-)</p>
 
