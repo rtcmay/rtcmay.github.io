@@ -20,12 +20,12 @@
     var CONFIG = {"hostname":"rtcmay.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="有很多朋友都想编译一个合适自己使用的OpenWRT固件，这样的好处就是只保留了自己需要使用的插件，非常精简，那么就需要自己搭建一个编译环境。但是并不是每个人都会搭建，现在有一个很便捷的方案，就是利用GitHub ACTIONS 在线云编译。一起来看看吧： #一、注册GitHub账号官网地址：https:&#x2F;&#x2F;github.com&#x2F; #二、激活GitHub ACTIONS功能（此步骤已经不需要做，直接">
+  <meta name="description" content="有很多朋友都想编译一个合适自己使用的OpenWRT固件，这样的好处就是只保留了自己需要使用的插件，非常精简，那么就需要自己搭建一个编译环境。但是并不是每个人都会搭建，现在有一个很便捷的方案，就是利用GitHub ACTIONS 在线云编译。一起来看看吧： 一、注册GitHub账号官网地址：https:&#x2F;&#x2F;github.com&#x2F; 二、激活GitHub ACTIONS功能（此步骤已经不需要做，直接到项">
 <meta property="og:type" content="article">
 <meta property="og:title" content="利用GitHub ACTIONS 在线云编译大雕的OpenWRT固件">
 <meta property="og:url" content="https://rtcmay.github.io/2020/04/16/%E5%88%A9%E7%94%A8GitHub-ACTIONS-%E5%9C%A8%E7%BA%BF%E4%BA%91%E7%BC%96%E8%AF%91%E5%A4%A7%E9%9B%95%E7%9A%84OpenWRT%E5%9B%BA%E4%BB%B6/index.html">
 <meta property="og:site_name" content="活着便精彩">
-<meta property="og:description" content="有很多朋友都想编译一个合适自己使用的OpenWRT固件，这样的好处就是只保留了自己需要使用的插件，非常精简，那么就需要自己搭建一个编译环境。但是并不是每个人都会搭建，现在有一个很便捷的方案，就是利用GitHub ACTIONS 在线云编译。一起来看看吧： #一、注册GitHub账号官网地址：https:&#x2F;&#x2F;github.com&#x2F; #二、激活GitHub ACTIONS功能（此步骤已经不需要做，直接">
+<meta property="og:description" content="有很多朋友都想编译一个合适自己使用的OpenWRT固件，这样的好处就是只保留了自己需要使用的插件，非常精简，那么就需要自己搭建一个编译环境。但是并不是每个人都会搭建，现在有一个很便捷的方案，就是利用GitHub ACTIONS 在线云编译。一起来看看吧： 一、注册GitHub账号官网地址：https:&#x2F;&#x2F;github.com&#x2F; 二、激活GitHub ACTIONS功能（此步骤已经不需要做，直接到项">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://wp.qiniu.gxnas.com/wp-content/uploads/2019/12/559e60266e26d3429413caefffec7e7e.png">
 <meta property="og:image" content="https://wp.qiniu.gxnas.com/wp-content/uploads/2019/12/64e86b1fc34788fba2b2561ee9035805.png">
@@ -36,7 +36,7 @@
 <meta property="og:image" content="https://wp.qiniu.gxnas.com/wp-content/uploads/2019/12/1658301c46d180793e5cb9bf90a2316a.png">
 <meta property="og:image" content="https://wp.qiniu.gxnas.com/wp-content/uploads/2019/12/c80ec309df3bf91aaddb831133fa89eb.png">
 <meta property="article:published_time" content="2020-04-17T00:35:14.000Z">
-<meta property="article:modified_time" content="2020-04-17T01:06:41.592Z">
+<meta property="article:modified_time" content="2020-04-17T01:10:37.523Z">
 <meta property="article:author" content="活着便精彩">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://wp.qiniu.gxnas.com/wp-content/uploads/2019/12/559e60266e26d3429413caefffec7e7e.png">
@@ -188,7 +188,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2020-04-16 20:35:14 / 修改时间：21:06:41" itemprop="dateCreated datePublished" datetime="2020-04-16T20:35:14-04:00">2020-04-16</time>
+              <time title="创建时间：2020-04-16 20:35:14 / 修改时间：21:10:37" itemprop="dateCreated datePublished" datetime="2020-04-16T20:35:14-04:00">2020-04-16</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -212,23 +212,21 @@
 
       
         <p>有很多朋友都想编译一个合适自己使用的OpenWRT固件，这样的好处就是只保留了自己需要使用的插件，非常精简，那么就需要自己搭建一个编译环境。但是并不是每个人都会搭建，现在有一个很便捷的方案，就是利用GitHub ACTIONS 在线云编译。一起来看看吧：</p>
-<p>#一、注册GitHub账号<br>官网地址：<a href="https://github.com/" target="_blank" rel="noopener">https://github.com/</a></p>
-<p>#二、激活GitHub ACTIONS功能（此步骤已经不需要做，直接到项目里面点击Action选项卡，就可以跳转到激活页面了）<br>激活地址：<a href="https://github.com/features/actions/signup" target="_blank" rel="noopener">https://github.com/features/actions/signup</a></p>
-<p>#三、fork 一建脚本项目<br><a href="https://github.com/KFERMercer/OpenWrt-CI" target="_blank" rel="noopener">https://github.com/KFERMercer/OpenWrt-CI</a></p>
+<h2 id="一、注册GitHub账号"><a href="#一、注册GitHub账号" class="headerlink" title="一、注册GitHub账号"></a>一、注册GitHub账号</h2><p>官网地址：<a href="https://github.com/" target="_blank" rel="noopener">https://github.com/</a></p>
+<h2 id="二、激活GitHub-ACTIONS功能（此步骤已经不需要做，直接到项目里面点击Action选项卡，就可以跳转到激活页面了）"><a href="#二、激活GitHub-ACTIONS功能（此步骤已经不需要做，直接到项目里面点击Action选项卡，就可以跳转到激活页面了）" class="headerlink" title="二、激活GitHub ACTIONS功能（此步骤已经不需要做，直接到项目里面点击Action选项卡，就可以跳转到激活页面了）"></a>二、激活GitHub ACTIONS功能（此步骤已经不需要做，直接到项目里面点击Action选项卡，就可以跳转到激活页面了）</h2><p>激活地址：<a href="https://github.com/features/actions/signup" target="_blank" rel="noopener">https://github.com/features/actions/signup</a></p>
+<h2 id="三、fork-一建脚本项目"><a href="#三、fork-一建脚本项目" class="headerlink" title="三、fork 一建脚本项目"></a>三、fork 一建脚本项目</h2><p><a href="https://github.com/KFERMercer/OpenWrt-CI" target="_blank" rel="noopener">https://github.com/KFERMercer/OpenWrt-CI</a></p>
 <img src="https://wp.qiniu.gxnas.com/wp-content/uploads/2019/12/559e60266e26d3429413caefffec7e7e.png" class="nofancybox" />
 
 
-<p>#四、fork L大的LEDE源码<br><a href="https://github.com/coolsnowwolf/lede" target="_blank" rel="noopener">https://github.com/coolsnowwolf/lede</a></p>
+<h2 id="四、fork-L大的LEDE源码"><a href="#四、fork-L大的LEDE源码" class="headerlink" title="四、fork L大的LEDE源码"></a>四、fork L大的LEDE源码</h2><p><a href="https://github.com/coolsnowwolf/lede" target="_blank" rel="noopener">https://github.com/coolsnowwolf/lede</a></p>
 <img src="https://wp.qiniu.gxnas.com/wp-content/uploads/2019/12/64e86b1fc34788fba2b2561ee9035805.png" class="nofancybox" />
 
-<p>#五、进入L大源码目录.github/workflows/</p>
-<img src="https://wp.qiniu.gxnas.com/wp-content/uploads/2019/12/2fc392bc6e31426ab0496b45cdaf4940.png" class="nofancybox" />
+<h2 id="五、进入L大源码目录-github-workflows"><a href="#五、进入L大源码目录-github-workflows" class="headerlink" title="五、进入L大源码目录.github/workflows/"></a>五、进入L大源码目录.github/workflows/</h2><img src="https://wp.qiniu.gxnas.com/wp-content/uploads/2019/12/2fc392bc6e31426ab0496b45cdaf4940.png" class="nofancybox" />
 
-<p>#六、打开openwrt-ci.yml，编辑代码（如需要添加其他的主题或者插件，可参考第九和第十条）</p>
-<img src="https://wp.qiniu.gxnas.com/wp-content/uploads/2019/12/714026c2422a5458643369cd0508da75.png" class="nofancybox" />
+<h2 id="六、打开openwrt-ci-yml，编辑代码（如需要添加其他的主题或者插件，可参考第九和第十条）"><a href="#六、打开openwrt-ci-yml，编辑代码（如需要添加其他的主题或者插件，可参考第九和第十条）" class="headerlink" title="六、打开openwrt-ci.yml，编辑代码（如需要添加其他的主题或者插件，可参考第九和第十条）"></a>六、打开openwrt-ci.yml，编辑代码（如需要添加其他的主题或者插件，可参考第九和第十条）</h2><img src="https://wp.qiniu.gxnas.com/wp-content/uploads/2019/12/714026c2422a5458643369cd0508da75.png" class="nofancybox" />
 
 <p>#</p>
-<h1 id="This-is-free-software-lisence-use-MIT"><a href="#This-is-free-software-lisence-use-MIT" class="headerlink" title="This is free software, lisence use MIT."></a>This is free software, lisence use MIT.</h1><h1 id=""><a href="#" class="headerlink" title=""></a></h1><h1 id="Copyright-C-2019-P3TERX-https-p3terx-com"><a href="#Copyright-C-2019-P3TERX-https-p3terx-com" class="headerlink" title="Copyright (C) 2019 P3TERX https://p3terx.com"></a>Copyright (C) 2019 P3TERX <a href="https://p3terx.com" target="_blank" rel="noopener">https://p3terx.com</a></h1><h1 id="Copyright-C-2019-KFERMercer-x4b-70-x45-x52-x2e-x4d-101-x72-x63-101-114-x40-x67-109-x61-105-x6c-46-99-x6f-109"><a href="#Copyright-C-2019-KFERMercer-x4b-70-x45-x52-x2e-x4d-101-x72-x63-101-114-x40-x67-109-x61-105-x6c-46-99-x6f-109" class="headerlink" title="Copyright (C) 2019 KFERMercer &#x4b;&#70;&#x45;&#x52;&#x2e;&#x4d;&#101;&#x72;&#x63;&#101;&#114;&#x40;&#x67;&#109;&#x61;&#105;&#x6c;&#46;&#99;&#x6f;&#109;"></a>Copyright (C) 2019 KFERMercer <a href="mailto:&#x4b;&#70;&#x45;&#x52;&#x2e;&#x4d;&#101;&#x72;&#x63;&#101;&#114;&#x40;&#x67;&#109;&#x61;&#105;&#x6c;&#46;&#99;&#x6f;&#109;">&#x4b;&#70;&#x45;&#x52;&#x2e;&#x4d;&#101;&#x72;&#x63;&#101;&#114;&#x40;&#x67;&#109;&#x61;&#105;&#x6c;&#46;&#99;&#x6f;&#109;</a></h1><h1 id="-1"><a href="#-1" class="headerlink" title=""></a></h1><h1 id="https-github-com-KFERMercer-OpenWrt-CI"><a href="#https-github-com-KFERMercer-OpenWrt-CI" class="headerlink" title="https://github.com/KFERMercer/OpenWrt-CI"></a><a href="https://github.com/KFERMercer/OpenWrt-CI" target="_blank" rel="noopener">https://github.com/KFERMercer/OpenWrt-CI</a></h1><p>#</p>
+<h1 id="This-is-free-software-lisence-use-MIT"><a href="#This-is-free-software-lisence-use-MIT" class="headerlink" title="This is free software, lisence use MIT."></a>This is free software, lisence use MIT.</h1><h1 id=""><a href="#" class="headerlink" title=""></a></h1><h1 id="Copyright-C-2019-P3TERX-https-p3terx-com"><a href="#Copyright-C-2019-P3TERX-https-p3terx-com" class="headerlink" title="Copyright (C) 2019 P3TERX https://p3terx.com"></a>Copyright (C) 2019 P3TERX <a href="https://p3terx.com" target="_blank" rel="noopener">https://p3terx.com</a></h1><h1 id="Copyright-C-2019-KFERMercer-x4b-x46-69-x52-x2e-x4d-101-114-x63-x65-x72-x40-x67-x6d-x61-x69-108-46-99-x6f-x6d"><a href="#Copyright-C-2019-KFERMercer-x4b-x46-69-x52-x2e-x4d-101-114-x63-x65-x72-x40-x67-x6d-x61-x69-108-46-99-x6f-x6d" class="headerlink" title="Copyright (C) 2019 KFERMercer &#x4b;&#x46;&#69;&#x52;&#x2e;&#x4d;&#101;&#114;&#x63;&#x65;&#x72;&#x40;&#x67;&#x6d;&#x61;&#x69;&#108;&#46;&#99;&#x6f;&#x6d;"></a>Copyright (C) 2019 KFERMercer <a href="mailto:&#x4b;&#x46;&#69;&#x52;&#x2e;&#x4d;&#101;&#114;&#x63;&#x65;&#x72;&#x40;&#x67;&#x6d;&#x61;&#x69;&#108;&#46;&#99;&#x6f;&#x6d;">&#x4b;&#x46;&#69;&#x52;&#x2e;&#x4d;&#101;&#114;&#x63;&#x65;&#x72;&#x40;&#x67;&#x6d;&#x61;&#x69;&#108;&#46;&#99;&#x6f;&#x6d;</a></h1><h1 id="-1"><a href="#-1" class="headerlink" title=""></a></h1><h1 id="https-github-com-KFERMercer-OpenWrt-CI"><a href="#https-github-com-KFERMercer-OpenWrt-CI" class="headerlink" title="https://github.com/KFERMercer/OpenWrt-CI"></a><a href="https://github.com/KFERMercer/OpenWrt-CI" target="_blank" rel="noopener">https://github.com/KFERMercer/OpenWrt-CI</a></h1><p>#</p>
 <p>name: OpenWrt-CI</p>
 <p>on:<br>  push:<br>    branches:<br>      - master</p>
 <h1 id="schedule"><a href="#schedule" class="headerlink" title="schedule:"></a>schedule:</h1><h1 id="cron-0-20"><a href="#cron-0-20" class="headerlink" title="- cron: 0 20 * * *"></a>- cron: 0 20 * * *</h1><h1 id="release"><a href="#release" class="headerlink" title="release:"></a>release:</h1><h1 id="types-published"><a href="#types-published" class="headerlink" title="types: [published]"></a>types: [published]</h1><p>jobs:<br>  build:<br>    runs-on: ubuntu-latest</p>
@@ -429,8 +427,7 @@
     uses: actions/upload-artifact@master
     with:
       name: OpenWrt firmware
-      path: ./artifact/</code></pre><p>#七、找到LEDE项目的ACTIONS，查看编译过程</p>
-<img src="https://wp.qiniu.gxnas.com/wp-content/uploads/2019/12/b7a1440e97d59ac05a6d78ecbd1063fc.png" class="nofancybox" />
+      path: ./artifact/</code></pre><h2 id="七、找到LEDE项目的ACTIONS，查看编译过程"><a href="#七、找到LEDE项目的ACTIONS，查看编译过程" class="headerlink" title="七、找到LEDE项目的ACTIONS，查看编译过程"></a>七、找到LEDE项目的ACTIONS，查看编译过程</h2><img src="https://wp.qiniu.gxnas.com/wp-content/uploads/2019/12/b7a1440e97d59ac05a6d78ecbd1063fc.png" class="nofancybox" />
 
 <img src="https://wp.qiniu.gxnas.com/wp-content/uploads/2019/12/94a68891bf6e9110085c8b1a03d939b3.png" class="nofancybox" />
 
@@ -438,13 +435,11 @@
 
 
 
-<p>#八、编译完成后下载固件</p>
-<img src="https://wp.qiniu.gxnas.com/wp-content/uploads/2019/12/c80ec309df3bf91aaddb831133fa89eb.png" class="nofancybox" />
+<h2 id="八、编译完成后下载固件"><a href="#八、编译完成后下载固件" class="headerlink" title="八、编译完成后下载固件"></a>八、编译完成后下载固件</h2><img src="https://wp.qiniu.gxnas.com/wp-content/uploads/2019/12/c80ec309df3bf91aaddb831133fa89eb.png" class="nofancybox" />
 
 
 
-<p>#九、自定义插件主题代码</p>
-<ul>
+<h2 id="九、自定义插件主题代码"><a href="#九、自定义插件主题代码" class="headerlink" title="九、自定义插件主题代码"></a>九、自定义插件主题代码</h2><ul>
 <li>name: 自定义插件主题。</li>
 <li><pre><code>run: |
   cd package
@@ -452,7 +447,7 @@
   cd openwrt-packages
   git clone https://github.com/openwrt-develop/luci-theme-atmaterial.git
   git clone https://github.com/Ameykyl/luci-app-koolproxyR
-  git clone https://github.com/rosywrt/luci-theme-rosy</code></pre>#十、LuCi Applications软件包说明</li>
+  git clone https://github.com/rosywrt/luci-theme-rosy</code></pre><h2 id="十、LuCi-Applications软件包说明"><a href="#十、LuCi-Applications软件包说明" class="headerlink" title="十、LuCi Applications软件包说明"></a>十、LuCi Applications软件包说明</h2></li>
 </ul>
 <ol>
 <li>LuCI —&gt; Applications —&gt; luci-app-accesscontrol #访问时间控制</li>
@@ -581,8 +576,7 @@
 <li>LuCI —&gt; Applications —&gt; luci-app-xlnetacc #迅雷快鸟</li>
 <li>LuCI —&gt; Applications —&gt; luci-app-zerotier #ZeroTier内网穿透</li>
 </ol>
-<p>#原文地址：<a href="https://www.vediotalk.com/archives/6561" target="_blank" rel="noopener">https://www.vediotalk.com/archives/6561</a></p>
-
+<h2 id="原文地址：https-www-vediotalk-com-archives-6561"><a href="#原文地址：https-www-vediotalk-com-archives-6561" class="headerlink" title="原文地址：https://www.vediotalk.com/archives/6561"></a>原文地址：<a href="https://www.vediotalk.com/archives/6561" target="_blank" rel="noopener">https://www.vediotalk.com/archives/6561</a></h2>
     </div>
 
     
@@ -659,7 +653,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#This-is-free-software-lisence-use-MIT"><span class="nav-number">1.</span> <span class="nav-text">This is free software, lisence use MIT.</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#"><span class="nav-number">2.</span> <span class="nav-text"></span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Copyright-C-2019-P3TERX-https-p3terx-com"><span class="nav-number">3.</span> <span class="nav-text">Copyright (C) 2019 P3TERX https:&#x2F;&#x2F;p3terx.com</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Copyright-C-2019-KFERMercer-x4b-70-x45-x52-x2e-x4d-101-x72-x63-101-114-x40-x67-109-x61-105-x6c-46-99-x6f-109"><span class="nav-number">4.</span> <span class="nav-text">Copyright (C) 2019 KFERMercer &amp;#x4b;&amp;#70;&amp;#x45;&amp;#x52;&amp;#x2e;&amp;#x4d;&amp;#101;&amp;#x72;&amp;#x63;&amp;#101;&amp;#114;&amp;#x40;&amp;#x67;&amp;#109;&amp;#x61;&amp;#105;&amp;#x6c;&amp;#46;&amp;#99;&amp;#x6f;&amp;#109;</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#-1"><span class="nav-number">5.</span> <span class="nav-text"></span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#https-github-com-KFERMercer-OpenWrt-CI"><span class="nav-number">6.</span> <span class="nav-text">https:&#x2F;&#x2F;github.com&#x2F;KFERMercer&#x2F;OpenWrt-CI</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#schedule"><span class="nav-number">7.</span> <span class="nav-text">schedule:</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#cron-0-20"><span class="nav-number">8.</span> <span class="nav-text">- cron: 0 20 * * *</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#release"><span class="nav-number">9.</span> <span class="nav-text">release:</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#types-published"><span class="nav-number">10.</span> <span class="nav-text">types: [published]</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、注册GitHub账号"><span class="nav-number">1.</span> <span class="nav-text">一、注册GitHub账号</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、激活GitHub-ACTIONS功能（此步骤已经不需要做，直接到项目里面点击Action选项卡，就可以跳转到激活页面了）"><span class="nav-number">2.</span> <span class="nav-text">二、激活GitHub ACTIONS功能（此步骤已经不需要做，直接到项目里面点击Action选项卡，就可以跳转到激活页面了）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、fork-一建脚本项目"><span class="nav-number">3.</span> <span class="nav-text">三、fork 一建脚本项目</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#四、fork-L大的LEDE源码"><span class="nav-number">4.</span> <span class="nav-text">四、fork L大的LEDE源码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#五、进入L大源码目录-github-workflows"><span class="nav-number">5.</span> <span class="nav-text">五、进入L大源码目录.github&#x2F;workflows&#x2F;</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#六、打开openwrt-ci-yml，编辑代码（如需要添加其他的主题或者插件，可参考第九和第十条）"><span class="nav-number">6.</span> <span class="nav-text">六、打开openwrt-ci.yml，编辑代码（如需要添加其他的主题或者插件，可参考第九和第十条）</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#This-is-free-software-lisence-use-MIT"><span class="nav-number"></span> <span class="nav-text">This is free software, lisence use MIT.</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#"><span class="nav-number"></span> <span class="nav-text"></span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Copyright-C-2019-P3TERX-https-p3terx-com"><span class="nav-number"></span> <span class="nav-text">Copyright (C) 2019 P3TERX https:&#x2F;&#x2F;p3terx.com</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Copyright-C-2019-KFERMercer-x4b-x46-69-x52-x2e-x4d-101-114-x63-x65-x72-x40-x67-x6d-x61-x69-108-46-99-x6f-x6d"><span class="nav-number"></span> <span class="nav-text">Copyright (C) 2019 KFERMercer &amp;#x4b;&amp;#x46;&amp;#69;&amp;#x52;&amp;#x2e;&amp;#x4d;&amp;#101;&amp;#114;&amp;#x63;&amp;#x65;&amp;#x72;&amp;#x40;&amp;#x67;&amp;#x6d;&amp;#x61;&amp;#x69;&amp;#108;&amp;#46;&amp;#99;&amp;#x6f;&amp;#x6d;</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#-1"><span class="nav-number"></span> <span class="nav-text"></span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#https-github-com-KFERMercer-OpenWrt-CI"><span class="nav-number"></span> <span class="nav-text">https:&#x2F;&#x2F;github.com&#x2F;KFERMercer&#x2F;OpenWrt-CI</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#schedule"><span class="nav-number"></span> <span class="nav-text">schedule:</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#cron-0-20"><span class="nav-number"></span> <span class="nav-text">- cron: 0 20 * * *</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#release"><span class="nav-number"></span> <span class="nav-text">release:</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#types-published"><span class="nav-number"></span> <span class="nav-text">types: [published]</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#七、找到LEDE项目的ACTIONS，查看编译过程"><span class="nav-number">1.</span> <span class="nav-text">七、找到LEDE项目的ACTIONS，查看编译过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#八、编译完成后下载固件"><span class="nav-number">2.</span> <span class="nav-text">八、编译完成后下载固件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#九、自定义插件主题代码"><span class="nav-number">3.</span> <span class="nav-text">九、自定义插件主题代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#十、LuCi-Applications软件包说明"><span class="nav-number">4.</span> <span class="nav-text">十、LuCi Applications软件包说明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#原文地址：https-www-vediotalk-com-archives-6561"><span class="nav-number">5.</span> <span class="nav-text">原文地址：https:&#x2F;&#x2F;www.vediotalk.com&#x2F;archives&#x2F;6561</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
